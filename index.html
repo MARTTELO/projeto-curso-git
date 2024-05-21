@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <p>===========================================================================</p>
+            <h3>o git não se importa com os arquivos que não foram comitados e não vai monitorar</h3>
+            <p>===========================================================================</p>
+            
+
+
+            <li>git reset - remove os arquivos que foram adicionado da standinh area do git</li>
+
+            <li>git add -A - adiciona tudo que foi modificado para a stading area</li>
+
+            <li>git commit -a -m 'texto' - comitando sem fazer o add</li>
+
+            <li>git add . - adiciona tudo da pasta que está pronta para ser adicionada, o que estiver fora da pasta não
+                será adicionado</li>
+
+            <li>git commit -C 'HASH DO COMMIT' -m 'texto' - comitando alterações com o mesmo commit da última alteração.
+            </li>
+
+            <li>git commit --amend --no-edit -> comita as alterações modificando o commit anterior, sem alterar o texto
+                do commit</li>
+
+            <li>git log - Mostra o historico de commits</li>
+            <li>git log --oneline - mostra os comits na forma reduida, 1 commit por linha</li>
+
+            <li>git reset 'nome-do arquivo-alterao'- remove o comite d standig area</li>
+
+            <li>git restore . - deleta totas as alterações feitas</li>
+
+            <li>git revert - deleta o comit e as alterações ficam disponiveis para salvar na stading novamente</li>
+
+            <li>git revert HEAD~2 reverte antepenultimo comit</li>
+
+            <li>git pull - puxa o repositorio do github</li>
+
+            <li>git push - envia o repositorio local para o github</li>
+
+            <li>git remote add 'origin' linkgithub -> origin é sua maquina</li>
+
+            <li>git branch -M main - altera o nome da branch principal para main</li>
+
+            <li>git push -u origin main - enviar seus arquivos para o repositorio no github</li>
+
+            <li>git branch 'nome-da-branch' - criar branch</li>
+
+            <li>git branch -l -> listar as branchs</li>
+
+            <li>git branch --show-current -> exibir branch atual</li>
+
+            <li>git checkout 'nome-da-branch' -> trocar de branch atual para a nomeada</li>
+
+            <li>git checkout -b 'nome-da-branch'-> criar uma nova branch e muda pra ela</li>
+
+            <li>git switch 'nome-da-branch' -> trocar de branch</li>
+
+            <li>git branch -M 'nome-da-branch' -> renomear branch</li>
+
+            <li>git branch --merge - mostra o merge a partir do ramo atual</li>
+
+            <li>git branch --no-merge -> mostra os branchs que não firzeram merge com a ramo atual</li>
+
+            <li>git branch -D 'nome-da-branch' - deletar a branch; Vc precisa estar numa branch diferente da que quer
+                deletar</li>
+
+            <li>git push origin --delete 'nome-da-branch' -> vai deletar a branch do repositorio</li>
+
+
+            <div>
+                <ol>
+                    <p>===========================================================================</p>
+                    <h3>…or create a new repository on the command line</h3>
+                    <p>===========================================================================</p>
+                    
+                    <li>echo "# projeto-curso-git" >> README.md</li>
+                    <li>git init</li>
+                    <li>git add README.md</li>
+                    <li>git commit -m "first commit"</li>
+                    <li>git remote add origin 'link repositorio github'</li>
+                    <li>git push -u origin master</li>
+                </ol>
+                <ol>
+                    <p>===========================================================================</p>
+                    <h3>…or push an existing repository from the command line</h3>
+                    <p>===========================================================================</p>
+
+                    <li>git remote add origin 'link repositorio github' -> estabelece conecao com o github</li>
+                    <li>git branch -M main -> renomeia a branch principal para main</li>
+                    <li>git push -u origin main => envia os arquivos para o repositorio remoto</li>
+                </ol>
+                <ol>
+                    <p>===========================================================================</p>
+                    <li>mkdir => cria uma pasta</li>
+                    <li>cd => navega entre pastas</li>
+                    <li>git status => mostr o status do seu repositorio</li>
+                    <li>git init => para iniciar um repositorio</li>
+                    <li>git touch <nome-do-arquivo> => para criar um arquivo via cmd</li>
+                    <li>git add . => adiciona todos os arquivos ao repositorio criado</li>
+                    <li>git add <nome-do-arquivo> => adiciona somente o arquivo indicado</li>
+                    <li>git log => mostra o autor, data e comitt</li>
+                </ol>
+                <ol>
+                    <p>===========================================================================</p>
+                    <h3>TESTANDO</h3>
+                    <p>===========================================================================</p>
+                    <li>- editei o arquivo html</li>
+                    <li>- git add . => para que este arquivo passe a ser monitorado</li>
+                    <li>- git commit -m 'comentario'</li>
+                    <li>- git push => para enviar o arquivo repositorio que ja está logado [projeto-curso-git.git ]</li>
+                </ol>
+                <ol>
+                    <p>===========================================================================</p>
+                    <h3>CRIANDO E TRABALHANDO COM BRANCH</h3>
+                    <p>===========================================================================</p>
+                    <li>- git branch => mostra todas as branchs criadas</li>
+                    <li>- git branch <nome-da-branch> => cria uma branch nova mas não desloga da branch atual</li>
+                    <li>- git branch -D <nome-da-branch> => deleta a branch desejada</li>
+                    <li>- git checkout -b <nome-da-branch> cria uma branch nova e já loga nela</li>
+                    <li>- git push origin <nome-da-branch> => fazer push da uma branch contato no repositorio porem a
+                            master
+                            esta desatualizada.</li>
+                </ol>
+                    <ol>
+                    <p>===========================================================================</p>
+                    <h3>ATUALIZANDO AS BRANCHS COM A MASTER</h3>
+                    <p>===========================================================================</p>
+                    <li>verifique em qual branch vc está e vá para a master</li>
+                    <li> - git merge <nome-da-branch> que vc criou</li>
+                    <li>- git push => para atualizar a master</li>
+                </ol>
+            </div>
+
+        </ul>
+    </div>
+
+</body>
+
+</html>

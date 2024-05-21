@@ -1,0 +1,25 @@
+:root{
+    --fundo: #222;
+    --corFonte: white;
+    --tamanhoFonte: 1.2rem;
+    --padding: 10px;
+}
+
+*{
+    margin: 0 auto;
+    color: var(--corFonte);
+    background-color: var(--fundo);
+    font-size: var(--tamanhoFonte);
+    padding: var(--padding);
+    margin-left: 20px;
+
+}
+li::marker{
+    color: darkgoldenrod;
+    font-size: var(--tamanhoFonte)
+}
+
+h3, p{
+    color: darkgoldenrod;
+    
+}
